@@ -2,7 +2,13 @@
 
 ## Site Link 
   - [Click here](https://carbon-emiss.herokuapp.com/)
-    
+  
+---
+ ### Video link
+
+- [Click here](https://www.loom.com/share/7ddc857dac1744e0b48c7cfefc742a6a)
+
+---
     
 ## Idea - Spreading information about Carbon emission in our Environment
 
@@ -51,12 +57,5 @@ Libraries used
 
 
 
-
-
-
-
 ---
-Video link
 
-
-- [Click here](https://www.loom.com/share/7ddc857dac1744e0b48c7cfefc742a6a)
