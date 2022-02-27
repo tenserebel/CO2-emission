@@ -21,8 +21,8 @@ Libraries used
 ---
 ### Description of Idea
 
-- Idea : Spreading information about Carbon emission and how we can find about our involved in it. 
-- Problem : Finding information about Carbon emitted by vehicles and how to find carbon emission of a vehicle
+- Idea : Spreading information about Carbon emission and how we can find about our involvement in it. 
+- Problem : Finding information about Carbon emission by vehicles and how to find carbon emission of your vehicle
 
     Offsetting people's unavoidable CO2 emissions is a practical and immediate way to take ownership of one's personal contribution to climate change. With Carbon FP, A person is  addressing global economic inequality . Offsetting also reveals both the need for cleaner energy sources and opportunities for reducing your Carbon Emissions
 
