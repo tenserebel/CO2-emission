@@ -29,9 +29,27 @@ Libraries used
 
 
 ---
-### Images
+### Site preview 
 
-An Image 
+    1. Landing page of our website 
+    
+![landing_page](https://user-images.githubusercontent.com/63935255/155897461-df8e1493-2352-4b60-8dea-5b6d92473fcf.png)
+     
+    2. Transport CO2 emissions 
+![co2page](https://user-images.githubusercontent.com/63935255/155897504-60dc3fcb-fdcd-47fd-a08b-24e8c77e76ce.png)
+
+
+    3. CO2 emission calculator 
+![co2calculator](https://user-images.githubusercontent.com/63935255/155897542-4d30e8fa-f893-4dbb-a523-7e00c606594c.png)
+
+    4. Carbon footprint calculator 
+![Screenshot 2022-02-28 at 1 21 16 AM](https://user-images.githubusercontent.com/63935255/155897567-209157ad-eafd-450b-8da9-c601df6e030c.png)
+
+
+
+
+
+
 
 ---
 Video link/embed
