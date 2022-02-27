@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://culer-ui.netlify.app/style.css">
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="nav-container nav-container-bg-gradient">
+              <div
+                class="mobile-nav-toggle"
+                aria-controls="nav-link-list"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Menu</span>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+              </div>
+          
+              <div class="nav-logo">
+                <a href="/">
+                  <div class="nav-title">
+                    Culer <span class="bold-font blue-text">U</span><span class="bold-font red-text">I</span>
+                  </div>
+                  <div class="nav-tagline">Més que un Club</div>
+                </a>
+              </div>
+          
+              <div class="nav-links">
+                <ul class="nav-link-list" id="nav-link-list" data-visible="false">
+                  <a href="/">
+                    <li class="nav-link-list-item">Home</li>
+                  </a>
+          
+                  <a href="/vehicle">
+                    <li class="nav-link-list-item">CO₂ Emission for Vehicle</li>
+                  </a>
+                  <a href="/footprint">
+                    <li class="nav-link-list-item">Carbon Footprint</li>
+                  </a>
+                </ul>
+              </div>
+              
+              
+            </nav>
+          </header>
+          <fieldset>
+            <legend>Information</legend>
+          <!-- <h2>Information</h2> -->
+          <p>Transport accounts for around one-fifth of global CO₂ emissions.Most of this comes from passenger vehicles – cars and buses – which contribute 45.1%. The other 29.4% comes from trucks carrying freight.
+            Since the entire transport sector accounts for 21% of total emissions, and road transport accounts for three-quarters of transport emissions, road transport accounts for 15% of total CO2 emissions.
+            Our analysis shows that the sales-weighted industry average CO2 emissions in FY 2018–19 from new passenger cars in India was 121.9 g/km
+          </p>
+        </fieldset>
+          <!-- <img src='static\graph.jpg' width="400" 
+          height="600" / class="center"> -->
+          <div class="grid-70-30-layout grid-dark-bg">
+            <div>
+                <img src="static\graph.jpg" alt="" class="image-responsive">
+            </div>
+            <div class="grid-text-div">
+                <p>The Graph shows how much amount of CO₂ is emitted by using petrol and diesel compare to more natural resources.
+                  The more amount of CO₂ that is released in the atmosphere, the more harmf it will cause. Therefore many government are trying to eliminate the use of these resources.
+                  There are more sustainable solutions such as electric cars or if you don't wanna ditch the tradition system all together you can use hybrid cars which work on both electricity as well as 
+                  petrol/Diesel. Another way to decrease this is Regularly using public transport or carpooling. This will not only decrease the amount of vehicles on road, thus decreasing the traffic but also reduces the CO₂ emission.
+                </p>
+            </div>
+    </div>
+    <p>Some helpful articles on vehicle CO₂ emission:</p>
+    <ol class="styled-list list-style-capital-roman list-container">
+      <li><a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">Greenhouse Gas Emissions from a Typical Passenger Vehicle</a><br></li>
+      <li><a href="https://www.europarl.europa.eu/news/en/headlines/society/20190313STO31218/co2-emissions-from-cars-facts-and-figures-infographics">CO2 emissions from cars: facts and figures (infographics)</a><br></li>
+      <li><a href="https://www.indiatimes.com/trending/environment/how-to-reduce-vehicle-emissions-378112.html">10 Ways To Reduce Harmful Emissions From Your Vehicle & Go Green!</a><br></li>
+      <li><a href="https://www.rac.co.uk/drive/advice/emissions/11-ways-to-reduce-your-car-emissions/">11 ways to reduce your driving emissions</a><br></li>
+  </ol>  
+    <hr>
+    <p> The below calulator will help you understand how much CO₂ is emitted through your car as well as cautionary measures to prevent the same.</p>
+          <h2>CO₂ Calculator</h2>
+          <form method="post" id="todo-form">
+            <label class="form-label form-label-required-field">Enter the engine size:</label>
+            <input type="number" step="0.001" id="engine" class="form-field" name="size" placeholder="Engine Size" required>
+            <label class="form-label form-label-required-field">Enter the Number of cylinder:</label>
+            <input type="number" step="0.001" id="cylinder" class="form-field" name="cylinder" placeholder="No of Cylinder" required><br>
+            <label class="form-label form-label-required-field">Enter the Fuel consumption in city roads (L/100 km):</label>
+            <input type="number" step="0.001" id="fuel_con" class="form-field" name="fuel_con" placeholder="Fuel consumption in city roads (L/100 km)" required><br>
+            <select name="type" id="type">
+                <option value="" disabled selected>select a type of fuel</option>
+                <option value="X">X (Regular gasoline)</option>
+                <option value="Z">Z (Premium gasoline)</option>
+                <option value="D">D (Diesel)</option>
+                <option value="E">E (Ethanol (E85))</option>
+                <option value="N">N (Natural gas)</option>
+            </select><br>
+            <button type="submit" class="btn btn-contained-primary">SUBMIT</button>
+            <p>The Co₂ emission for you vehicle is:<b>{{ data }}</b> in grams per kilometre.</p>
+            <p>Here are some ways to decrease CO₂ emission:</p>
+            <ol class="styled-list list-style-capital-roman list-container">
+              <li>Getting a PUC(Pollution Under Control) certificate. This helps in determining that the emissions coming from your vehicle are within the permissible limits.</li>
+              <li>Reducing the overall weight of your vehicle might help in less fuel consumption as more weight means more work for the engine.</li>
+              <li>Using better Fuel helps in improving fuel efficiency and reducing emissions. This is due to the fact that These types of fuels contain active cleaning agents to remove dirt from the engine.</li>
+              <li>Regular check up of Air filter might decrease multitude of issues,If an engine can't breathe, deposits will build up, causing premature wear and tear.</li>
+              <li>Limiting the idle time will save you a lot of fuel as restarting takes less fuel than idling for 10 second.</li>
+          </ol>
+        <script src="" async defer></script>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function(event) { 
+              var scrollpos = localStorage.getItem('scrollpos');
+              if (scrollpos) window.scrollTo(0, scrollpos);
+          });
+  
+          window.onbeforeunload = function(e) {
+              localStorage.setItem('scrollpos', window.scrollY);
+          };
+            </script>
+            <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+      <script type="text/javascript">
+      $(document).on('submit','#todo-form',function(e)
+                    {
+        console.log('hello');
+        e.preventDefault();
+        $.ajax({
+          type:'POST',
+          url:'/vehicle',
+          data:{
+            size:$("#engine").val(),
+            cylinder:$("#cylinder").val(),
+            fuel_con:$("#fuel_con").val(),
+            type:$("#type").val()
+          },
+          success:function()
+          {
+            alert('saved');
+            }
+          })
+        });
+        </script>
+    </body>
+</html>
