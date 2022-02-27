@@ -7,11 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://culer-ui.netlify.app/style.css">
+        <link rel="stylesheet" href="https://culerstore.netlify.app/style.css">
         <link rel="stylesheet" href="static/style.css">
+        
     </head>
     <body>
         <header>
-            <nav class="nav-container nav-container-bg-gradient">
+            <nav class="nav-container box-shadow">
               <div
                 class="mobile-nav-toggle"
                 aria-controls="nav-link-list"
@@ -26,9 +28,9 @@
               <div class="nav-logo">
                 <a href="/">
                   <div class="nav-title">
-                    Culer <span class="bold-font blue-text">U</span><span class="bold-font red-text">I</span>
+                    Carbon <span class="bold-font blue-text">F</span><span class="bold-font red-text">P</span>
                   </div>
-                  <div class="nav-tagline">Més que un Club</div>
+                  <div class="nav-tagline">Care for environment</div>
                 </a>
               </div>
           
@@ -50,19 +52,19 @@
               
             </nav>
           </header>
-          <fieldset>
+          <fieldset class="margin-2-auto width-80">
             <legend>Information</legend>
           <!-- <h2>Information</h2> -->
           <p>Transport accounts for around one-fifth of global CO₂ emissions.Most of this comes from passenger vehicles – cars and buses – which contribute 45.1%. The other 29.4% comes from trucks carrying freight.
             Since the entire transport sector accounts for 21% of total emissions, and road transport accounts for three-quarters of transport emissions, road transport accounts for 15% of total CO2 emissions.
-            Our analysis shows that the sales-weighted industry average CO2 emissions in FY 2018–19 from new passenger cars in India was 121.9 g/km
+            Our analysis shows that the sales-weighted industry average CO2 emissions in FY 2018–19 from new passenger cars in India was 121.9 g/km.
           </p>
         </fieldset>
           <!-- <img src='static\graph.jpg' width="400" 
           height="600" / class="center"> -->
-          <div class="grid-70-30-layout grid-dark-bg">
+          <div class="grid-70-30-layout grid-dark-bg width-80 margin-2-auto ">
             <div>
-                <img src="static\graph.jpg" alt="" class="image-responsive">
+                <img src="static\graph.jpg" alt="" class="image-responsive height-90">
             </div>
             <div class="grid-text-div">
                 <p>The Graph shows how much amount of CO₂ is emitted by using petrol and diesel compare to more natural resources.
@@ -72,33 +74,44 @@
                 </p>
             </div>
     </div>
+    <div class="margin-2-auto width-80">
+      
     <p>Some helpful articles on vehicle CO₂ emission:</p>
     <ol class="styled-list list-style-capital-roman list-container">
-      <li><a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">Greenhouse Gas Emissions from a Typical Passenger Vehicle</a><br></li>
-      <li><a href="https://www.europarl.europa.eu/news/en/headlines/society/20190313STO31218/co2-emissions-from-cars-facts-and-figures-infographics">CO2 emissions from cars: facts and figures (infographics)</a><br></li>
-      <li><a href="https://www.indiatimes.com/trending/environment/how-to-reduce-vehicle-emissions-378112.html">10 Ways To Reduce Harmful Emissions From Your Vehicle & Go Green!</a><br></li>
-      <li><a href="https://www.rac.co.uk/drive/advice/emissions/11-ways-to-reduce-your-car-emissions/">11 ways to reduce your driving emissions</a><br></li>
+      <li><a class="btn-link" href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">Greenhouse Gas Emissions from a Typical Passenger Vehicle</a><br></li>
+      <li><a class="btn-link" href="https://www.europarl.europa.eu/news/en/headlines/society/20190313STO31218/co2-emissions-from-cars-facts-and-figures-infographics">CO2 emissions from cars: facts and figures (infographics)</a><br></li>
+      <li><a class="btn-link" href="https://www.indiatimes.com/trending/environment/how-to-reduce-vehicle-emissions-378112.html">10 Ways To Reduce Harmful Emissions From Your Vehicle & Go Green!</a><br></li>
+      <li><a class="btn-link" href="https://www.rac.co.uk/drive/advice/emissions/11-ways-to-reduce-your-car-emissions/">11 ways to reduce your driving emissions</a><br></li>
   </ol>  
+  </div>
     <hr>
-    <p> The below calulator will help you understand how much CO₂ is emitted through your car as well as cautionary measures to prevent the same.</p>
-          <h2>CO₂ Calculator</h2>
-          <form method="post" id="todo-form">
-            <label class="form-label form-label-required-field">Enter the engine size:</label>
-            <input type="number" step="0.001" id="engine" class="form-field" name="size" placeholder="Engine Size" required>
-            <label class="form-label form-label-required-field">Enter the Number of cylinder:</label>
-            <input type="number" step="0.001" id="cylinder" class="form-field" name="cylinder" placeholder="No of Cylinder" required><br>
-            <label class="form-label form-label-required-field">Enter the Fuel consumption in city roads (L/100 km):</label>
-            <input type="number" step="0.001" id="fuel_con" class="form-field" name="fuel_con" placeholder="Fuel consumption in city roads (L/100 km)" required><br>
-            <select name="type" id="type">
-                <option value="" disabled selected>select a type of fuel</option>
-                <option value="X">X (Regular gasoline)</option>
-                <option value="Z">Z (Premium gasoline)</option>
-                <option value="D">D (Diesel)</option>
-                <option value="E">E (Ethanol (E85))</option>
-                <option value="N">N (Natural gas)</option>
-            </select><br>
-            <button type="submit" class="btn btn-contained-primary">SUBMIT</button>
-            <p>The Co₂ emission for you vehicle is:<b>{{ data }}</b> in grams per kilometre.</p>
+    <p class="width-80 margin-2-auto"> The below calulator will help you understand how much CO₂ is emitted through your car as well as cautionary measures to prevent the same.
+      It uses machine learning to accurately predict your vehicles emission.
+    </p>
+      <fieldset id="" class="width margin-2-1 margin-2-auto">    
+      <legend class="bold-font font-size-125 padding-05-1">CO₂ Calculator</legend>
+            
+            <form method="post" id="todo-form">
+              <label class="form-label form-label-required-field">Enter the engine size:</label>
+              <input type="number" step="0.001" id="engine" class="form-field" name="size" placeholder="Engine Size" required>
+              <label class="form-label form-label-required-field">Enter the Number of cylinder:</label>
+              <input type="number" step="0.001" id="cylinder" class="form-field" name="cylinder" placeholder="No of Cylinder" required><br>
+              <label class="form-label form-label-required-field">Enter the Fuel consumption in city roads (L/100 km):</label>
+              <input type="number" step="0.001" id="fuel_con" class="form-field" name="fuel_con" placeholder="Fuel consumption in city roads (L/100 km)" required><br>
+              <select name="type" id="type" class="selecter">
+                  <option value="" disabled selected>Select a type of fuel</option>
+                  <option value="X">X (Regular gasoline)</option>
+                  <option value="Z">Z (Premium gasoline)</option>
+                  <option value="D">D (Diesel)</option>
+                  <option value="E">E (Ethanol (E85))</option>
+                  <option value="N">N (Natural gas)</option>
+              </select><br>
+
+              <button type="submit" class="btn btn-contained-primary">SUBMIT</button>
+            </fieldset>
+            <div id="extraInfoHolder">
+            <div class="width-80 margin-2-auto">
+            <p>The Co₂ emission for you vehicle is:<b id="data">{{ data }}</b> in grams per kilometre.</p>
             <p>Here are some ways to decrease CO₂ emission:</p>
             <ol class="styled-list list-style-capital-roman list-container">
               <li>Getting a PUC(Pollution Under Control) certificate. This helps in determining that the emissions coming from your vehicle are within the permissible limits.</li>
@@ -107,6 +120,12 @@
               <li>Regular check up of Air filter might decrease multitude of issues,If an engine can't breathe, deposits will build up, causing premature wear and tear.</li>
               <li>Limiting the idle time will save you a lot of fuel as restarting takes less fuel than idling for 10 second.</li>
           </ol>
+        </div>
+          </div> 
+          <footer class="footer" id="footer">
+            <p>Made with ♥️ by Phoenix Corp</p>
+            <p>© All Rights Reserved.</p>
+        </footer>
         <script src="" async defer></script>
         
         <script>
@@ -124,6 +143,9 @@
             crossorigin="anonymous"></script>
 
       <script type="text/javascript">
+        const dataHolder=document.getElementById("data")
+        const extraInfoHolder=document.getElementById("extraInfoHolder")
+        extraInfoHolder.style.display="none"
       $(document).on('submit','#todo-form',function(e)
                     {
         console.log('hello');
@@ -137,12 +159,58 @@
             fuel_con:$("#fuel_con").val(),
             type:$("#type").val()
           },
-          success:function()
+          success:function(data)
           {
-            alert('saved');
+            console.log(data)
+            dataHolder.innerHTML = data;
+            // extraInfoHolder.style.visibility="visible"
+            extraInfoHolder.style.display="block";
             }
           })
         });
+        </script>
+        <script>
+          const navLinks = document.querySelector("#nav-link-list");
+          const navToggle = document.querySelector(".mobile-nav-toggle");
+
+          const line1 = document.querySelector(".line1");
+          const line2 = document.querySelector(".line2");
+          const line3 = document.querySelector(".line3");
+
+          navToggle.addEventListener("click", () => {
+              const visibility = navLinks.getAttribute("data-visible");
+              
+              if (visibility === "false") {
+
+                  navLinks.setAttribute("data-visible", true);
+                  navToggle.setAttribute("aria-expanded", true);
+                  document.body.style.overflow = "hidden";
+                  document.body.style.background = " rgba(0, 0, 0, 0.4)";
+
+                  line1.classList.add("translate");
+                  line2.classList.add("rotate-135deg");
+                  line3.classList.add("rotate-45deg");
+              } else {
+                  navLinks.setAttribute("data-visible", false);
+                  navToggle.setAttribute("aria-expanded", false);
+                  document.body.style.overflow = "visible";
+                  document.body.style.background = "none";
+
+                  line1.classList.remove("translate");
+                  line2.classList.remove("rotate-135deg");
+                  line3.classList.remove("rotate-45deg");
+              }
+          });
+
+          let resizeTimer;
+          window.addEventListener("resize", () => {
+              document.body.classList.add("resize-animation-stopper");
+            
+              resizeTimer = setTimeout(() => {
+                  document.body.classList.remove("resize-animation-stopper");
+                  clearTimeout(resizeTimer);
+              }, 400);
+          });
         </script>
     </body>
 </html>

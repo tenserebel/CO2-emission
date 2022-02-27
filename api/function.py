@@ -32,28 +32,26 @@ def convert(amount, currency):
 def foot_print(electric_bill, gas_bill, oil_bill, yearly_mileage, 
                less_flight, more_flight, newspaper, aluminium, currency):
     
-    electric = convert(electric_bill, currency)*105
+    electric = int(convert(electric_bill, currency)*105)
     
-    gas = convert(gas_bill, currency)*105
+    gas = int(convert(gas_bill, currency)*105)
 
-    oil = convert(oil_bill, currency)*113
+    oil = int(convert(oil_bill, currency)*113)
 
-    mileage = float(yearly_mileage) * 0.79
-    less_flight = less_flight * 1100
-    more_flight = more_flight* 4400
+    mileage = float((yearly_mileage) * 0.79)
+    less_flight = int(less_flight * 1100)
+    more_flight = int(more_flight* 4400)
+    total =  electric+gas+oil+mileage+less_flight+more_flight
     
-    if newspaper == True :
+    if newspaper == "True" :
         pass
-    else : 
-        newspaper =  184
-        
-    if aluminium == True :
+    else: 
+        total +=  184
+    
+    if aluminium == "True" :
         pass
-    else : 
-        aluminium =  184
-        
-    total =  electric+gas+oil+mileage+less_flight+more_flight+newspaper+aluminium
+    else: 
+        total +=  166 
     
     return total
-        
-   
+         

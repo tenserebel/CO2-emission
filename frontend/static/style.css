@@ -1,3 +1,14 @@
+@import url("https://culer-ui.netlify.app/style.css");
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+body{
+  /* font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif; */
+  font-family: 'Tinos', serif;
+  font-size: 1.1rem;
+}
+p {
+  line-height: 1.7;
+}
 select{
     display: flex;
     gap: 2rem;
@@ -14,16 +25,49 @@ select{
   }
 
   /* unvisited link */
-a:link {
+/* a:link {
     color:#3498db;
   }
   
-  /* visited link */
   a:visited {
     color: blue;
   }
   
-  /* mouse over link */
   a:hover {
     color:green;
+  } */
+
+.selecter{
+  padding:0.75rem 2rem;
+  accent-color: red;
+}
+.width{
+  max-width: 45rem;
+}
+.nav_color{
+  background-color:var(--color-dark-mode-bg);
+}
+.width-80{
+  width: 80%;
+}
+.width-90{
+  width: 90%;
+}
+.height-90{
+  max-height: 100vh;
+}
+@media screen and (max-width:30em){
+  .margin-2-1{
+    margin: 2rem 1rem;
   }
+}
+.font-2-5{
+  font-size: 2.5rem;
+}
+
+h2.headertekst {
+  text-align: center;
+}
+
+
+/* var(--color-barcelona-red); */

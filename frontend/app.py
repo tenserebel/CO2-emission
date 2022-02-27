@@ -18,15 +18,42 @@ def vehicle():
         cylinder=request.form.get('cylinder')
         fuel_con=request.form.get('fuel_con')
         type1=request.form.get('type')
-        url = f"https://co2.kk-001.repl.co/vehicle/{size}/{cylinder}/{fuel_con}/{type1}"
+        url = f"https://co2-emission1.herokuapp.com/vehicle/{size}/{cylinder}/{fuel_con}/{type1}"
         response = requests.get(url)
         data = response.text
+        return data 
+
+    if(request.method == 'GET'):
+        return render_template('vehicle.html')    
         
     return render_template('vehicle.html',data=data)
 
+
 @app.route('/footprint',methods=["GET", "POST"])
 def carbon_footprint():
-    return render_template('carbon_footprint.html')
+    data=""
+    if request.method=='POST':
+        currency=request.form.get('currency')
+        electric=request.form.get('electric')
+        gas=request.form.get('gas')
+        oil=request.form.get('oil')
+        yearly_mileage=request.form.get('yearly_mileage')
+        less_flight=request.form.get('less_flight')
+        more_flight=request.form.get('more_flight')
+        recycle_paper=request.form.get('recycle_paper')
+        recycle_aluminum=request.form.get('recycle_aluminum')
+        print(electric,currency,recycle_paper,recycle_aluminum)
+        url = f"https://co2-emission1.herokuapp.com/personal/{electric}.0/{gas}.0/{oil}.0/{yearly_mileage}.0/{less_flight}/{more_flight}/{recycle_paper}/{recycle_aluminum}/{currency}"
+        print(url)
+        response = requests.get(url)
+        data = response.text
+        
+        return data
+
+    if(request.method == 'GET'):
+        return render_template('carbon_footprint.html')
+
+    return render_template('carbon_footprint.html',data=data)
 
 if __name__ == '__main__':
-    app.run(host = 'localhost', port=8080,use_reloader=False) 
+    app.run() 

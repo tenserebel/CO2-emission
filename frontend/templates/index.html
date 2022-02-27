@@ -7,10 +7,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://culer-ui.netlify.app/style.css">
+        <link rel="stylesheet" href="https://culerstore.netlify.app/style.css">
+        <link rel="stylesheet" href="static/style.css">
     </head>
     <body>
         <header>
-            <nav class="nav-container nav-container-bg-gradient">
+            <nav class="nav-container box-shadow">
               <div
                 class="mobile-nav-toggle"
                 aria-controls="nav-link-list"
@@ -25,9 +27,9 @@
               <div class="nav-logo">
                 <a href="/">
                   <div class="nav-title">
-                    Culer <span class="bold-font blue-text">U</span><span class="bold-font red-text">I</span>
+                    Carbon <span class="bold-font blue-text">F</span><span class="bold-font red-text">P</span>
                   </div>
-                  <div class="nav-tagline">Més que un Club</div>
+                  <div class="nav-tagline">Care for environment</div>
                 </a>
               </div>
           
@@ -49,7 +51,81 @@
               
             </nav>
           </header>
-        
+          <div class="width-80 margin-2-auto">
+          <img src="static\logo.jpg" class="image-responsive " alt="image">
+        </div>
+        <div class="width-80 margin-2-auto">
+        <h2 class="font-2-5 padding-05-1 headertekst">About Carbon FP</h2>
+        </div>
+        <hr>
+        <p class="width-80 margin-2-auto">Carbon FP is for spreading information about Carbon emission and how we can find about our involved in it. 
+          The site contains information about Carbon emitted by vehicles and how to find carbon emission of your vehicle as well as 
+          finding out about your own carbon footprint.</p>
+          <hr>
+          <div class="width-80 margin-2-auto">
+            <h2 class="font-2-5 padding-05-1 headertekst">Why should we care?</h2>
+            </div>
+            <hr>
+            <p class="width-80 margin-2-auto">Carbon emissions are dangerous in that they threaten the livelihood of our planet, animals, humans, and ultimately, life as we know it. The amount of carbon emissions trapped in our atmosphere causes global warming, which causes climate change, symptoms of which include melting of the polar ice caps, the rising of sea levels, the disturbance of animals’ natural habitats, extreme weather events, and so many more negative side effects that are dangerous to the planet, to human and animal life, and to our future.</p>
+              <hr>
+          <div class="width-80 margin-2-auto">
+              <h2 class="font-2-5 padding-05-1 headertekst">Features of Carbon FP</h2>
+            </div>
+              <hr> 
+              <div class="width-80 margin-2-auto">
+              <ol class="styled-list list-style-capital-roman list-container">
+                <li><p class="margin-0-0">Finding information about Carbon emission</p></li>
+                <li><p class="margin-0-0">A ML trained model for Carbon emission caused by your vehicle.</p></li>
+                <li><p class="margin-0-0">A personal Carbon footprint Calculator.</p></li>
+              </ol>
+            </div> 
+              <footer class="footer" id="footer">
+                <p>Made with ♥️ by Phoenix Corp</p>
+                <p>© All Rights Reserved.</p>
+            </footer>
         <script src="" async defer></script>
+        <script>
+          const navLinks = document.querySelector("#nav-link-list");
+          const navToggle = document.querySelector(".mobile-nav-toggle");
+
+          const line1 = document.querySelector(".line1");
+          const line2 = document.querySelector(".line2");
+          const line3 = document.querySelector(".line3");
+
+          navToggle.addEventListener("click", () => {
+              const visibility = navLinks.getAttribute("data-visible");
+
+              if (visibility === "false") {
+
+                  navLinks.setAttribute("data-visible", true);
+                  navToggle.setAttribute("aria-expanded", true);
+                  document.body.style.overflow = "hidden";
+                  document.body.style.background = " rgba(0, 0, 0, 0.4)";
+
+                  line1.classList.add("translate");
+                  line2.classList.add("rotate-135deg");
+                  line3.classList.add("rotate-45deg");
+              } else {
+                  navLinks.setAttribute("data-visible", false);
+                  navToggle.setAttribute("aria-expanded", false);
+                  document.body.style.overflow = "visible";
+                  document.body.style.background = "none";
+
+                  line1.classList.remove("translate");
+                  line2.classList.remove("rotate-135deg");
+                  line3.classList.remove("rotate-45deg");
+              }
+          });
+
+          let resizeTimer;
+          window.addEventListener("resize", () => {
+              document.body.classList.add("resize-animation-stopper");
+            
+              resizeTimer = setTimeout(() => {
+                  document.body.classList.remove("resize-animation-stopper");
+                  clearTimeout(resizeTimer);
+              }, 400);
+          });
+        </script>
     </body>
 </html>

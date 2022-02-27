@@ -17,7 +17,7 @@ def co2(engine_size,Cylinders,fuel_consumption,fuel_type):
     output=round(output,2)
     return jsonify(output)
 
-@app.route("/personal/<electric_bill>/<gas_bill>/<oil_bill>/<yearly_mileage>/<less_flight>/<more_flight>/<newspaper>/<aluminium>/<currency>")
+@app.route("/personal/<float:electric_bill>/<float:gas_bill>/<float:oil_bill>/<float:yearly_mileage>/<int:less_flight>/<int:more_flight>/<newspaper>/<aluminium>/<currency>")
 def personal(electric_bill, gas_bill, oil_bill, yearly_mileage, 
                less_flight, more_flight, newspaper, aluminium, currency):
         output=foot_print(electric_bill, gas_bill, oil_bill, yearly_mileage, 
@@ -27,4 +27,4 @@ def personal(electric_bill, gas_bill, oil_bill, yearly_mileage,
 
 
 if __name__ == '__main__':
-    app.run(host = 'localhost', port =80)   
+    app.run()   
