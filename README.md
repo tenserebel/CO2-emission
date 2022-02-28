@@ -1,6 +1,6 @@
-# Carbon FP 
+# * Carbon FP * 
 ## By Team Phoenix Corp
-### An project for Hackmol 3.0
+### A project for Hackmol 3.0
 ## Site Link 
   - [Click here](https://carbon-emiss.herokuapp.com/)
   
